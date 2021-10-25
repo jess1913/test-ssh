@@ -1,0 +1,93 @@
+*, ::before, ::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ededed;
+}
+
+.drops{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: pink;
+}
+
+.drop{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    border-radius: 45% 55% 70% 30% / 48% 47% 53% 52% ;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+    15px 25px 10px rgba(0, 0, 0, 0.1),
+    15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9)
+    ;
+    /* animation: move 8s infinite ; */
+}
+
+.drop::before{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 49% 51% 56% 44% / 74% 47% 53% 26% ;
+}
+.drop::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 49% 51% 10% 90% / 20% 71% 29% 80%  ;
+}
+
+.drop:nth-child(2){
+    transform: scale(0.5) translate(-200px, 152px);
+    border-radius: 36% 64% 61% 39% / 20% 71% 29% 80% ;
+  animation-delay: 2s;
+}
+.drop:nth-child(3){
+    transform: scale(0.5) translate(254px, 10px);
+    border-radius: 36% 64% 61% 39% / 41% 41% 59% 59% ;
+}
+.drop:nth-child(4){
+    transform: scale(0.35) translate(125px, -350px);
+    border-radius: 48% 52% 61% 39% / 77% 16% 84% 23%  ;
+}
+
+/* @keyframes move {
+  0%{
+      transform: translate(0%, -50%);
+  }
+  0%{
+      transform: translate(20%, -50%);
+  }
+  0%{
+      transform: translate(-30%, -50%);
+  }
+  0%{
+      transform: translate(-40%, -50%);
+  }
+  
+  50%{
+      transform: translate(-50%, -150%);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+} */
+
